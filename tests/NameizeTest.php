@@ -59,6 +59,8 @@ final class NameizeTest extends TestCase
             ['leonardo dicaprio', 'Leonardo DiCaprio'],
             ['john mcafee', 'John McAfee'],
             ['ronald mcdonald', 'Ronald McDonald'],
+            ['mary harding-rolls', 'Mary Harding-Rolls'], // n-barrelled names
+            ['mary harding-rolls-copernicus', 'Mary Harding-Rolls-Copernicus'],
         ];
     }
 }
