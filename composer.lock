@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53bee75a4de9dcc1711d79f7602f62fa",
+    "content-hash": "2bcda8b7d9b8c4bdae7cc08164e6da60",
     "packages": [
         {
             "name": "enricodias/nameize",
@@ -52,6 +52,52 @@
                 "name"
             ],
             "time": "2019-11-27T14:19:03+00:00"
+        },
+        {
+            "name": "leocavalcante/nameize",
+            "version": "dev-extendability",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:leocavalcante/Nameize.git",
+                "reference": "021081da6202583a279abe53fd0f417365349336"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leocavalcante/Nameize/zipball/021081da6202583a279abe53fd0f417365349336",
+                "reference": "021081da6202583a279abe53fd0f417365349336",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "codacy/coverage": "^1.4",
+                "phpunit/phpunit": ">5.7 <9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeoCavalcante\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Enrico Dias",
+                    "email": "enrico@enricodias.com"
+                }
+            ],
+            "description": "A simple class to correctly capitalize full names.",
+            "keywords": [
+                "capitalize",
+                "format",
+                "formater",
+                "name"
+            ],
+            "time": "2020-04-19T23:07:43+00:00"
         }
     ],
     "packages-dev": [
@@ -1700,7 +1746,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "leocavalcante/nameize": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

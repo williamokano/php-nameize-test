@@ -1,8 +1,15 @@
 {
     "name": "williamoktano/php-nameize-test",
     "description": "Nameize test",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/leocavalcante/Nameize"
+        }
+    ],
     "require": {
-        "enricodias/nameize": "^0.4.2"
+        "enricodias/nameize": "^0.4.2",
+        "leocavalcante/nameize": "dev-extendability"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.1"

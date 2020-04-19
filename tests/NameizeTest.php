@@ -27,6 +27,21 @@ final class NameizeTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider inputsProvider
+     */
+    public function testShouldConverNameWithLeoCavalcanteImplementation($name, $expected)
+    {
+        $this->assertEquals(
+            $expected,
+            \LeoCavalcante\Nameize::create()
+                ->setAllowedCharacters(['\''])
+                ->setExclusions(['Dos', 'E', 'Von', 'Van'])
+                ->set(new LeoCavalcante\Prefixes(['Di', 'Mc']))
+                ->name($name)
+        );
+    }
+
     public function inputsProvider()
     {
         return [
@@ -41,6 +56,9 @@ final class NameizeTest extends TestCase
             ['óscar énio', 'Óscar Énio'],
             ['ludwig von mises', 'Ludwig von Mises'],
             ['ludwig van beethoven', 'Ludwig van Beethoven'],
+            ['leonardo dicaprio', 'Leonardo DiCaprio'],
+            ['john mcafee', 'John McAfee'],
+            ['ronald mcdonald', 'Ronald McDonald'],
         ];
     }
 }
