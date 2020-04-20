@@ -37,7 +37,8 @@ final class NameizeTest extends TestCase
             \LeoCavalcante\Nameize::create()
                 ->setAllowedCharacters(['\''])
                 ->setExclusions(['Dos', 'E', 'Von', 'Van'])
-                ->set(new LeoCavalcante\Prefixes(['Di', 'Mc']))
+                ->set(new LeoCavalcante\Prefixes(['Mc']))
+                ->set(new LeoCavalcante\Hardfixes(['DiCaprio']))
                 ->name($name)
         );
     }
@@ -61,6 +62,7 @@ final class NameizeTest extends TestCase
             ['ronald mcdonald', 'Ronald McDonald'],
             ['mary harding-rolls', 'Mary Harding-Rolls'], // n-barrelled names
             ['mary harding-rolls-copernicus', 'Mary Harding-Rolls-Copernicus'],
+            ['cameron diaz', 'Cameron Diaz'],
         ];
     }
 }
